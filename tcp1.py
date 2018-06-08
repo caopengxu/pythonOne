@@ -6,7 +6,7 @@ HTML_ROOT_DIR = "./html"
 
 serverSocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 serverSocket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
-serverSocket.bind(("", 6789))
+serverSocket.bind(("", 4567))
 serverSocket.listen(1000)
 
 
@@ -33,7 +33,7 @@ def handleClient(clientSocket):
     print("*" * 20)
     print(fileName)
 
-    if "/" == fileName
+    if "/" == fileName:
         fileName = "/index.html"
 
     try:
