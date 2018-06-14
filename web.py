@@ -33,6 +33,7 @@ class HTTPServer(object):
         requestData = clientSocket.recv(1024)
         requestLines = requestData.splitlines()
         requestStartLine = requestLines[0]
+        print(requestStartLine.decode("utf-8"))
         fileName = re.match(r"\w+ +(/[^ ]*) ", requestStartLine.decode("utf-8")).group(1)
         method = re.match(r"(\w+) +/[^ ]* ", requestStartLine.decode("utf-8")).group(1)
 
